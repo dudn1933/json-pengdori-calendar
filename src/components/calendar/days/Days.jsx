@@ -12,7 +12,7 @@ const Days = ({day}) => {
             days.push(count);
             count++;
         }
-        return new Array(dayOfWeek).fill("").concat(days).map((v,i) => <Day key={i}>{v}</Day>);
+        return new Array(dayOfWeek).fill("").concat(days).map((v,i) => <Day key={i} weekday={i}>{v}</Day>);
     }
 
     return (
@@ -28,4 +28,7 @@ const StyleDays = styled.div`
     display:grid;
     grid-template-columns: repeat(7, 1fr);
 `;
-const Day = styled.div``;
+const Day = styled.div`
+    color: ${({ weekday }) => weekday%7 === 0 ? 'red' : weekday%7 === 6 ? 'blue' : null};
+    text-align: center;
+`;
