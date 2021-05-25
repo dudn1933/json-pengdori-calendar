@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { useContext } from "react";
 import { GlobalContext } from "../util/globalContext/globalContext";
 import Year_Month from './year_month/Year_Month';
-import Days from './days/days/Days';
 
 export const Calendar = () => {
     const {date, dispatch} = useContext(GlobalContext);
@@ -30,9 +29,16 @@ export const Calendar = () => {
     )
 }
 
-const LeftButton = styled.button``;
-const RightButton = styled.button``;
+const LeftButton = styled.button`
+    position:absolute;
+    left:2rem;
+`;
+const RightButton = styled.button`
+    position:absolute;
+    right:2rem;
+`;
 const StyleCalendar = styled.div`
+    position:relative;
     display:flex;
     justify-content:center;
     align-items: center;

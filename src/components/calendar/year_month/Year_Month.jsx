@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Days from '../days/days/Days';
+import Days from '../days/Days';
 
 const Year_Month = ({date,index}) => {
     const currentMonth = () => {
